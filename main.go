@@ -1,11 +1,7 @@
 package main
 
 import "fmt"
-// import "piscine"
-
-func checkmate(str []string) {
-	fmt.Println("Dummy!");
-}
+import "piscine"
 
 func main() {
 	fmt.Println("valid maps---------\n");
@@ -72,7 +68,7 @@ func main() {
 			}
 		fmt.Println("")
 	}
-		checkmate(empty_maps[h])
+		piscine.Checkmate(empty_maps[h])
 		fmt.Println("")
 	}
 
@@ -137,11 +133,11 @@ func main() {
 			}
 		fmt.Println("")
 	}
-		checkmate(success_maps[h])
+		piscine.Checkmate(success_maps[h])
 		fmt.Println("")
 	}
 
-	fmt.Println("valid maps---------\n");
+	fmt.Println("invalid maps---------\n");
 	wrong_width_maps := [][]string{
 		{
 		"K",
@@ -187,7 +183,7 @@ func main() {
 			}
 		fmt.Println("")
 	}
-		checkmate(wrong_width_maps[h])
+		piscine.Checkmate(wrong_width_maps[h])
 		fmt.Println("")
 	}
 
