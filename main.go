@@ -118,15 +118,15 @@ func main() {
 	}
 	output("queen_success_maps", queen_success_maps)
 
-	success_maps := [][]string{
+	rook_success_maps := [][]string{
 		{
 		"K.",
-		".P",
+		"R.",
 		},
 		{
 		"K...",
+		"R...",
 		"....",
-		"..B.",
 		"....",
 		},
 		{
@@ -142,15 +142,20 @@ func main() {
 		"........",
 		"........",
 		"...K....",
-		"....P...",
+		"...R....",
 		"........",
 		"........",
 		"........",
 		},
 	}
-	output("success_maps", success_maps)
+	output("rook_success_maps", rook_success_maps)
 
-	fmt.Println("invalid maps---------\n");
+	
+	fmt.Println("//////////////////////////////////////////");
+	fmt.Println("invalid maps---------");
+	fmt.Println("//////////////////////////////////////////\n");
+
+
 	empty_maps := [][]string{
 		{
 		"..",
@@ -204,6 +209,38 @@ func main() {
 		},
     }
 	output("empty", empty_maps)
+
+	no_string := [][]string{
+		{
+		},
+	}
+	output("no_string", no_string)
+
+	invalid_char := [][]string{
+		{
+		"K...",
+		".P..",
+		"..x.",
+		"....",
+		},
+	}
+	output("invalid_char", invalid_char)
+
+	big_map := [][]string{
+		{
+		"K.........",
+		".P........",
+		"..........",
+		"..........",
+		"..........",
+		"..........",
+		"..........",
+		"..........",
+		"..........",
+		"..........",
+		},
+	}
+	output("big_map", big_map)
 
 	wrong_width_maps := [][]string{
 		{
