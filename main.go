@@ -4,16 +4,17 @@ import "fmt"
 import "piscine"
 
 func output(str string, board [][]string) {
-	fmt.Println("pawn_success_maps=========\n");
-	for h := 0; h < len(pawn_success_maps); h++{ 
-		for i := 0; i < len(pawn_success_maps[h]); i++{ 
-			for j := 0; j < len(pawn_success_maps[h][i]); j++{
-				fmt.Print(string(pawn_success_maps[h][i][j]))
+	fmt.Print(str);
+	fmt.Println("=========\n");
+	for h := 0; h < len(board); h++{ 
+		for i := 0; i < len(board[h]); i++{ 
+			for j := 0; j < len(board[h][i]); j++{
+				fmt.Print(string(board[h][i][j]))
 				fmt.Print(" ")
 			}
 		fmt.Println("")
 	}
-		piscine.Checkmate(pawn_success_maps[h])
+		piscine.Checkmate(board[h])
 		fmt.Println("")
 	}
 }
@@ -51,18 +52,7 @@ func main() {
 		"........",
 		},
 	}
-	fmt.Println("pawn_success_maps=========\n");
-	for h := 0; h < len(pawn_success_maps); h++{ 
-		for i := 0; i < len(pawn_success_maps[h]); i++{ 
-			for j := 0; j < len(pawn_success_maps[h][i]); j++{
-				fmt.Print(string(pawn_success_maps[h][i][j]))
-				fmt.Print(" ")
-			}
-		fmt.Println("")
-	}
-		piscine.Checkmate(pawn_success_maps[h])
-		fmt.Println("")
-	}
+	output("pawn_success_maps", pawn_success_maps)
 
 	Bishop_success_maps := [][]string{
 		{
@@ -94,18 +84,7 @@ func main() {
 		"........",
 		},
 	}
-	fmt.Println("Bishop_success_maps=========\n");
-	for h := 0; h < len(Bishop_success_maps); h++{ 
-		for i := 0; i < len(Bishop_success_maps[h]); i++{ 
-			for j := 0; j < len(Bishop_success_maps[h][i]); j++{
-				fmt.Print(string(Bishop_success_maps[h][i][j]))
-				fmt.Print(" ")
-			}
-		fmt.Println("")
-	}
-		piscine.Checkmate(Bishop_success_maps[h])
-		fmt.Println("")
-	}
+	output("Bishop_success_maps", Bishop_success_maps)
 
 	queen_success_maps := [][]string{
 		{
@@ -137,18 +116,7 @@ func main() {
 		"........",
 		},
 	}
-	fmt.Println("queen_success_maps=========\n");
-	for h := 0; h < len(queen_success_maps); h++{ 
-		for i := 0; i < len(queen_success_maps[h]); i++{ 
-			for j := 0; j < len(queen_success_maps[h][i]); j++{
-				fmt.Print(string(queen_success_maps[h][i][j]))
-				fmt.Print(" ")
-			}
-		fmt.Println("")
-	}
-		piscine.Checkmate(queen_success_maps[h])
-		fmt.Println("")
-	}
+	output("queen_success_maps", queen_success_maps)
 
 	success_maps := [][]string{
 		{
@@ -180,18 +148,7 @@ func main() {
 		"........",
 		},
 	}
-	fmt.Println("success_maps=========\n");
-	for h := 0; h < len(success_maps); h++{ 
-		for i := 0; i < len(success_maps[h]); i++{ 
-			for j := 0; j < len(success_maps[h][i]); j++{
-				fmt.Print(string(success_maps[h][i][j]))
-				fmt.Print(" ")
-			}
-		fmt.Println("")
-	}
-		piscine.Checkmate(success_maps[h])
-		fmt.Println("")
-	}
+	output("success_maps", success_maps)
 
 	fmt.Println("invalid maps---------\n");
 	empty_maps := [][]string{
@@ -246,20 +203,7 @@ func main() {
 		"..............................",
 		},
     }
-
-	fmt.Println("empty=========\n");
-	for h := 0; h < len(empty_maps); h++{ 
-		for i := 0; i < len(empty_maps[h]); i++{ 
-			for j := 0; j < len(empty_maps[h][i]); j++{
-				fmt.Print(string(empty_maps[h][i][j]))
-				fmt.Print(" ")
-			}
-		fmt.Println("")
-	}
-		piscine.Checkmate(empty_maps[h])
-		fmt.Println("")
-	}
-
+	output("empty", empty_maps)
 
 	wrong_width_maps := [][]string{
 		{
@@ -297,17 +241,5 @@ func main() {
 		"......",
 		},
 	}
-	fmt.Println("wrong_width_maps=========\n");
-	for h := 0; h < len(wrong_width_maps); h++{ 
-		for i := 0; i < len(wrong_width_maps[h]); i++{ 
-			for j := 0; j < len(wrong_width_maps[h][i]); j++{
-				fmt.Print(string(wrong_width_maps[h][i][j]))
-				fmt.Print(" ")
-			}
-		fmt.Println("")
-	}
-		piscine.Checkmate(wrong_width_maps[h])
-		fmt.Println("")
-	}
-
+	output("wrong_width_maps", wrong_width_maps)
 }
