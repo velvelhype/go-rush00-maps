@@ -22,6 +22,38 @@ func output(str string, board [][]string) {
 func main() {
 	fmt.Println("valid maps---------\n");
 
+	invalid_charas := [][]string{
+		{
+		"Ka",
+		"aP",
+		},
+		{
+		"K...",
+		".PQ.",
+		"..A.",
+		"....",
+		},
+		{
+		"..1...",
+		"..2...",
+		"..K...",
+		"...P..",
+		"......",
+		"......",
+		},
+		{
+		".... ...",
+		"........",
+		"........",
+		"...K....",
+		"....P...",
+		".. .....",
+		".....ooo",
+		".....mmm",
+		},
+	}
+	output("invalid_charas", invalid_charas)
+	
 	pawn_success_maps := [][]string{
 		{
 		"K.",
